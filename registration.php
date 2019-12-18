@@ -1,6 +1,6 @@
 <?php
 
-require_once('connectivity.php');
+include('connectivity.php');
 
 $username = $password = $confirmp = "";
 $username_er = $password_er = $confirmp_er = "";
@@ -56,12 +56,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 echo "Something went wrong. Please try again later.";
             }
         }
-
-        // Close statement
         mysqli_stmt_close($stmt);
     }
-
-    // Close connection
     mysqli_close($link);
 }
 ?>
