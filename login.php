@@ -1,7 +1,11 @@
 <?php
-include('login.php');
+include('connectivity.php');
+require_once('path.inc');
+require_once('get_host_info.inc');
+require_once('rabbitMQLib.inc');
+
 if(isset($_SESSION['login_user'])){
-    header("location: profile.php");
+    header("location: usertable.php");
 }
 ?>
 <!DOCTYPE html>
